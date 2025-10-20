@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XTC校验码计算器</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="header">
+          <h1>XTC校验码计算器</h1>
+        </div>
+
+        <div class="input-group">
+          <label for="codeInput" class="label">输入校验码：</label>
+          <input 
+            type="text" 
+            id="codeInput" 
+            class="input-field" 
+            placeholder="请输入校验码..."
+            maxlength="20"
+          >
+        </div>
+
+        <div class="mode-selector">
+          <button type="button" class="mode-button active" data-mode="adb">
+            ADB
+          </button>
+          <button type="button" class="mode-button" data-mode="zj">
+            自检
+          </button>
+        </div>
+
+        <button type="button" class="calculate-button" id="calculateBtn">
+          计算
+        </button>
+
+        <div id="resultContainer" class="result-container hidden">
+          <div class="result-title" id="resultTitle"></div>
+          <div class="result-value" id="resultValue"></div>
+        </div>
+
+        <div class="footer">
+          <p>XTC校验码计算工具</p>
+          <div class="author-info" title="花火玩偶不会前端导致的">
+            Written by DeepSeek
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
