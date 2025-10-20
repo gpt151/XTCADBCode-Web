@@ -27,12 +27,30 @@ body {
 }
 
 .container {
-  width: 120%;
+  width: 100%;
   background: white;
   border-radius: 12px;
   padding: 40px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 20px;
+}
+
+/* 手机和窄屏设备适配 */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 20px;
+    margin: 0;
+    max-width: 100%;
+  }
+  
+  body {
+    padding: 20px;
+    align-items: flex-start;
+  }
 }
 
 .header {
